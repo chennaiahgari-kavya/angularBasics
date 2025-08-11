@@ -1,0 +1,101 @@
+<p>secondlevel works!</p>
+<div>
+    <h2>
+        customer Registration form
+    </h2>
+    <form (ngSubmit)="onSubmit()">
+    <label>Name</label>
+   <input type="text" placeholder="enter your name" /><br>
+    <label>Email</label>
+ <input type="text" placeholder="enter your email" /><br>
+   <label>Password</label>
+ <input type="text" placeholder="enter your password" /><br>
+   <label>Message</label>
+ <input type="text" placeholder="give any message" />
+   <input type="submit">
+   </form>
+</div>
+<!-- ng directive we use fo change the style based on the ondition -->
+<h1>ngDirective</h1>
+<div [ngStyle]="{ 'background-color': 'red' }">
+  This div has a light blue background
+</div>
+<!-- ngclass we change for the class based on the condition -->
+ <h1>ngclass</h1>
+ <p [ngClass]="{'divcolor':isactive}">
+    this is ngclass
+ </p>
+ <!-- ngIf Directive display content based on the condition -->
+ <h1>ngIf Directive</h1>
+<p *ngIf="false" [ngStyle]="{'background-color':'blue'}">
+    secreteKey:@242729kavya
+</p>
+<label>custemoer is eligible or not</label>
+<input type="checkbox" [(ngModel)]="customereligibiliyt" value="custemoer is eligible or not"/>
+<p>
+    {{customereligibiliyt}}
+</p>
+<p *ngIf="customereligibiliyt">
+    secreteKey:@242729kavya
+</p>
+<p #question>hey!!how are you ding</p>
+<button (click)="eventclick(question)">Click Me</button>
+{{answer}}
+<h1>ng-template </h1>
+<p *ngIf="isLoggedIn; else guestBlock">
+  Welcome, user!
+</p>
+
+<ng-template #guestBlock>
+  <p>Please log in.</p>
+</ng-template>
+<h1>ng for directive</h1>
+<ul>
+  <li *ngFor="let fruit of fruits">
+    {{ fruit }}
+  </li>
+</ul>
+<h3>
+    by using text box
+</h3>
+<ul>
+  <li *ngFor="let fruit of fruits">
+    <input type="text" [value]="fruit"/>
+  </li>
+</ul>
+<h3>by using  dropdown</h3>
+<select>
+    <option *ngFor="let fruit of fruits">
+        {{fruit}}
+    </option>
+</select>
+<h3>you have to set dindex value for above</h3>
+<ul>
+  <li *ngFor="let fruit of fruits; let ind = index">
+    {{ ind }} : <input type="text" [value]="fruit" />
+  </li>
+</ul>
+<h3>You have to set default values</h3>
+
+<select [(ngModel)]="fruitdefaultvalue">
+  <option *ngFor="let fruit of fruits; let ind = index" [value]="fruit">
+    {{ fruit }}
+  </option>
+</select>
+
+<p>Selected fruit: {{ fruitdefaultvalue }}</p>
+<h1>ng switch case</h1>
+
+<h3>Select a fruit</h3>
+<select [(ngModel)]="selectedFruit">
+  <option *ngFor="let fruit of fruits" [value]="fruit">
+    {{ fruit }}
+  </option>
+</select>
+
+<div [ngSwitch]="selectedFruit">
+  <p *ngSwitchCase="'Apple'">🍎 You chose Apple!</p>
+  <p *ngSwitchCase="'Banana'">🍌 You chose Banana!</p>
+  <p *ngSwitchCase="'Mango'">🥭 You chose Mango!</p>
+  <p *ngSwitchDefault>Please choose a fruit</p>
+</div>
