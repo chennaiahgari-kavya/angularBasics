@@ -1,0 +1,33 @@
+<p>firstlevel works!</p>
+<!-- <div [ngStyle]="{ 'background-color': divcolor, 
+'font-size': divfontsize,
+(mouseover)=changecolor()
+}">
+
+  This is a styled div
+</div> -->
+<!-- <div [ngStyle]="
+{
+ 'background-color': divcolor, 
+ 'font-size'       : divfontsize
+}" (mouseover)="changeColor()"
+   (mouseout) ="resetColor()"
+   (click)="otherColor()">
+    {{divText}}
+</div> -->
+<!-- ngstyle -->
+<div [ngStyle]="{'background-color': 'red'}">
+  This div has a red background
+</div>
+<div [ngStyle]="{ 'background-color': bgColor, 'font-size': fontSize }">
+  Styled from component
+</div>
+<div [ngStyle]="{ 'color': isError ? 'red' : 'green' }">
+  This text is red if error, green otherwise
+</div>
+<div [ngStyle]="{ 'background-color': divColor }"
+     (mouseover)="divColor = 'orange'"
+     (mouseout)="divColor = 'lightgreen'">
+  Hover to change color
+</div>
+

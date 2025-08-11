@@ -2,21 +2,21 @@
 
 <!-- <app-profile></app-profile> -->
  
-<h1>Welcome to {{ title }}!</h1>
+<!-- <h1>Welcome to {{ title }}!</h1>
 <p>Hello, {{ userName }}!</p>
-{{userName}}reddy
+{{userName}}reddy -->
 <!-- Property binding to disable the button -->
-<button [disabled]="isButtonDisabled">Click Me</button>
+<!-- <button [disabled]="isButtonDisabled">Click Me</button> -->
 
 <!-- Property binding to set input value -->
-<input [value]="inputValue">
+<!-- <input [value]="inputValue"> -->
 
 <!-- Toggle the button's disabled state -->
-<br><br>
+<!-- <br><br>
 <button (click)="isButtonDisabled = !isButtonDisabled">
   Toggle Button State
-</button>
-<p [style.color]="isError ? 'red' : 'green'">
+</button> -->
+<!-- <p [style.color]="isError ? 'red' : 'green'">
   This is a status message
 </p>
 <img [src]="logoUrl" [alt]="logoAlt">
@@ -25,8 +25,8 @@
 <input (input)="onInputChange($event)">
 <p>You typed: {{ typedText }}</p>
 <button (click)="count = count + 1">Add</button>
-<p>Count: {{ count }}</p>
-<div 
+<p>Count: {{ count }}</p> -->
+<!-- <div 
   (mouseenter)="onMouseOver()" 
   (mouseleave)="onMouseOut()" 
   style="width:200px; height:100px; background-color: lightblue; text-align:center; line-height:100px; cursor:pointer;">
@@ -34,3 +34,26 @@
 </div>
 
 <p>{{ message }}</p>
+<input [(ngModel)]="username" placeholder="Enter your name">
+<p>Hello, {{ username }}!</p> -->
+<!-- <select [(ngModel)]="selectedCity">
+  <option value="">--Choose City--</option>
+  <option value="Hyderabad">Hyderabad</option>
+  <option value="Delhi">Delhi</option>
+</select>
+<p>You selected: {{ selectedCity }}</p>
+<label>
+  <input type="checkbox" [(ngModel)]="isChecked">
+  Accept Terms
+</label>
+<p>Checked: {{ isChecked }}</p>
+<input 
+  [(ngModel)]="username" 
+  (ngModelChange)="onNameChange($event)" 
+  placeholder="Type your name">
+<p>Hellooooooo, {{ username }}!</p> -->
+<app-firstlevel></app-firstlevel>
+
+
+
+
